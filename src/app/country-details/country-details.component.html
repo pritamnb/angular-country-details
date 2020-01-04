@@ -1,1 +1,10 @@
-<p>country-details works!</p>
+<table>
+  <tr *ngFor="let country of data">
+    <td style="color: red">
+      {{country.label}}
+    </td>
+    <td style="color: green">
+      {{country.value}}
+    </td>
+  </tr>
+</table>

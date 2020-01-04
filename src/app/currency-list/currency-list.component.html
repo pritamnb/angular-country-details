@@ -1,1 +1,24 @@
-<p>currency-list works!</p>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Symbol</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let item of CurrencyDetails && CurrencyDetails['currencies'] | keyvalue;let i = index">
+      <td>
+        {{i}}
+      </td>
+      <td>
+        {{item.value['name']}}
+      </td>
+      <td>
+        {{item.value['code']}}
+      </td>
+      <td>
+        {{item.value['symbol']}}
+      </td>
+    </tr>
+  </tbody>
+</table>

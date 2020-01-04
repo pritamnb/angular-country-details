@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
 import { Router } from '@angular/router';
+import { CountryDetailsService } from '../services/country-details.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +10,10 @@ import { Router } from '@angular/router';
 export class SidebarComponent implements OnInit {
   p: any;
   contents: any;
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private _countryService: CountryDetailsService
+  ) {
     this.contents = [
       {
         name: 'Home',
@@ -28,8 +32,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSelected(ch, name, path) {
 
+  onSelected(ch, name, path) {
     this.p = path;
     console.log(this.p);
     this.router.navigate([`${this.p}`]);

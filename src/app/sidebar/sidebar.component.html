@@ -1,0 +1,20 @@
+<div class="sidebar">
+  <div class="sidebarSub">
+    <div>
+      <!-- <p style="color: white">Home</p> -->
+      <!-- <p > -->
+      <div class="ul-sidebarContent" *ngFor="let item of contents; let i = index"
+        (click)="onSelected(i,item['name'],item['path'])">
+
+        <ul>
+          {{
+            item["name"]
+          }}
+        </ul>
+        <!-- </p> -->
+      </div>
+      <!-- </p> -->
+    </div>
+  </div>
+  <!-- </div> -->
+</div>

@@ -1,0 +1,18 @@
+.container {
+  overflow-x: hidden;
+  .innerContent {
+    padding: 20px;
+    height: calc(100% - 110px);
+    width: calc(100% - 19%);
+    // height: 88%;
+    // width: 77.3%;
+    background-color: #f7f8fa;
+    position: absolute;
+    font-size: 30px;
+    left: 16%;
+    overflow: hidden;
+    .innerRows {
+      height: 100%;
+    }
+  }
+}

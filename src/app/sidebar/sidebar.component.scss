@@ -1,0 +1,36 @@
+.sidebar {
+  // display: flex;
+  position: absolute;
+  float: left;
+  width: 16%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  bottom: 0;
+  background-color: #525a65;
+  text-align: center;
+  justify-content: space-around; // margin-top: 10%;
+  color: white;
+  // padding: 5%;
+  .sidebarSub {
+    margin-top: 5%;
+    // border: solid;
+    // border-color: black;
+    // height: 350px;
+    padding: 18px;
+    .ul-sidebarContent {
+      cursor: pointer;
+      font-size: 20px;
+      color: white;
+      ul {
+        padding: 14px;
+        text-align: left;
+        font-size: 15px;
+      }
+      ul:hover {
+        color: #e5e7e9;
+        background-color: #5c6879;
+      }
+    }
+  }
+}

@@ -1,21 +1,23 @@
-<table>
-  <tr>
-    <th>#</th>
-    <th>Name</th>
-    <th>Native Name</th>
+<div class="container">
+  <table id="language-list">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Native Name</th>
 
-  </tr>
-  <tbody>
-    <tr *ngFor="let item of languageDetails && languageDetails['languages'] | keyvalue;let i = index">
-      <td>
-        {{i}}
-      </td>
-      <td>
-        {{item.value['name']}}
-      </td>
-      <td>
-        {{item.value['nativeName']}}
-      </td>
     </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr *ngFor="let item of languageDetails && languageDetails['languages'] | keyvalue;let i = index">
+        <td>
+          {{i+1}}
+        </td>
+        <td>
+          {{item.value['name']}}
+        </td>
+        <td>
+          {{item.value['nativeName']}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

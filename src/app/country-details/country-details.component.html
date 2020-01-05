@@ -1,10 +1,12 @@
-<table>
-  <tr *ngFor="let country of data">
-    <td style="color: red">
-      {{country.label}}
-    </td>
-    <td style="color: green">
-      {{country.value}}
-    </td>
-  </tr>
-</table>
+<div class="container">
+  <table id="country-details">
+    <tr *ngFor="let country of data">
+      <td>
+        {{country.label}}
+      </td>
+      <td>
+        {{country.value}}
+      </td>
+    </tr>
+  </table>
+</div>

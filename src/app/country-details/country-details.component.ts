@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryDetailsService } from '../services/country-details.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-country-details',
@@ -46,9 +47,11 @@ export class CountryDetailsComponent implements OnInit {
     }
   ];
   countryDetails: any;
+  liveRoute: any;
   constructor(
-    private _countryService: CountryDetailsService
+    private _countryService: CountryDetailsService,
   ) {
+
     this._countryService._allCountries$.subscribe(
       (countriesDetails) => {
         console.log('countriesDetails', countriesDetails);

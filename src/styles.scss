@@ -138,5 +138,16 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// extended the width
+.mat-form-field-infix {
+  width: 400px !important;
+}

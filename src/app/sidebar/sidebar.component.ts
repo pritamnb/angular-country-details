@@ -12,8 +12,8 @@ export class SidebarComponent implements OnInit {
   contents: any;
   constructor(
     private router: Router,
-    private _countryService: CountryDetailsService
   ) {
+    // setting up a label and route
     this.contents = [
       {
         name: 'Home',
@@ -33,9 +33,9 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelected(ch, name, path) {
+  onSelected(path) {
     this.p = path;
-    console.log(this.p);
+    // it will navigate to the user selected route
     this.router.navigate([`${this.p}`]);
   }
 }

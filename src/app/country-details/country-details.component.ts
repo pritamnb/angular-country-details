@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryDetailsService } from '../services/country-details.service';
-import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-country-details',
   templateUrl: './country-details.component.html',
@@ -49,14 +47,11 @@ export class CountryDetailsComponent implements OnInit {
   countryDetails: any;
   liveRoute: any;
   constructor(
-    router: Router,
     private _countryService: CountryDetailsService,
   ) {
-    this.liveRoute = router.url.replace('/', '');
 
     this._countryService._allCountries$.subscribe(
       (countriesDetails) => {
-        console.log('countriesDetails', countriesDetails);
         if (countriesDetails && countriesDetails['alpha3Code']) {
           this._countryService.getSelectedCountryDetails(countriesDetails['alpha3Code']).subscribe((countryInfo) => {
             this.countryDetails = countryInfo;

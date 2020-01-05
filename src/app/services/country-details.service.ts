@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { ApiEndPoints } from '../app.contant';
 import { BehaviorSubject } from 'rxjs';
+import { sprintf } from 'sprintf-js';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountryDetailsService {
-
   private allCounteriesDataSource = new BehaviorSubject({});
   _allCountries$ = this.allCounteriesDataSource.asObservable();
 
@@ -15,11 +15,12 @@ export class CountryDetailsService {
   }
 
   getAllCountryDetails() {
-    return this.http.get('https://restcountries.eu/rest/v2/all');
+    return this.http.get(ApiEndPoints.COUNTRY.ALL_DETAILS);
   }
 
   getSelectedCountryDetails(alpha3Code) {
-    return this.http.get(`https://restcountries.eu/rest/v2/alpha/${alpha3Code}`);
+    return this.http.get(sprintf(ApiEndPoints.COUNTRY.CURRENCY_LIST, alpha3Code));
+
   }
 
   setAllCountries(data) {

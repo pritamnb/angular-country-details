@@ -8,8 +8,8 @@ export class HttpConstants {
 }
 export class ApiEndPoints {
   static COUNTRY = {
-    ALL_DETAILS: '/rest/v2/all',
-    LANGUAGE_LIST: '/rest/v2/alpha/%s',
-    CURRENCY_LIST: '/rest/v2/alpha/%s' // based on particular country
+    ALL_DETAILS: environment.API_URL + '/rest/v2/all',
+    LANGUAGE_LIST: environment.API_URL + '/rest/v2/alpha/%s',
+    CURRENCY_LIST: environment.API_URL + '/rest/v2/alpha/%s'
   };
 }

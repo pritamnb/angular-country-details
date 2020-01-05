@@ -6,7 +6,7 @@
           [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
           <mat-option *ngFor="let item of countryList | keyvalue" [value]="item.value['name']"
-            (click)="onSelectCoutry(item)">
+            (click)="onSelectCoutry($event,item)" (onSelectionChange)="onSelectCoutry($event,item)">
             {{item.value['name']}}
           </mat-option>
         </mat-autocomplete>

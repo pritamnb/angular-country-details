@@ -1,20 +1,15 @@
 <div class="sidebar">
   <div class="sidebarSub">
     <div>
-      <!-- <p style="color: white">Home</p> -->
-      <!-- <p > -->
-      <div class="ul-sidebarContent" *ngFor="let item of contents; let i = index"
-        (click)="onSelected(i,item['name'],item['path'])">
 
+      <div class="ul-sidebarContent" *ngFor="let item of contents; let i = index" (click)="onSelected(item['path'])">
+        <!-- By selecting the item it will navigate to that particular route  -->
         <ul>
           {{
             item["name"]
           }}
         </ul>
-        <!-- </p> -->
       </div>
-      <!-- </p> -->
     </div>
   </div>
-  <!-- </div> -->
 </div>

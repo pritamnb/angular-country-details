@@ -12,12 +12,14 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { CountryDetailsService } from './services/country-details.service';
 import { MatTable, MatTableModule } from '@angular/material';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -55,6 +55,8 @@ export class CountryDetailsComponent implements OnInit {
         if (countriesDetails && countriesDetails['alpha3Code']) {
           this._countryService.getSelectedCountryDetails(countriesDetails['alpha3Code']).subscribe((countryInfo) => {
             this.countryDetails = countryInfo;
+            console.log('countryInfo', countryInfo);
+            // tslint:disable-next-line: forin
             for (const iterator in this.countryDetails) {
               this.data.map(
                 (ele) => {

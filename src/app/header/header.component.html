@@ -1,16 +1,14 @@
 <div class="header">
   <div class="country-name-container">
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input type="text" placeholder="Select Country" aria-label="Number" matInput [formControl]="myControl"
-          [matAutocomplete]="auto">
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-          <mat-option *ngFor="let item of countryList | keyvalue" [value]="item.value['name']"
-            (click)="onSelectCoutry($event,item)" (onSelectionChange)="onSelectCoutry($event,item)">
-            {{item.value['name']}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-    </form>
+    <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Select Country" aria-label="Number" matInput [(ngModel)]="defaultCountry"
+        [matAutocomplete]="auto">
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let item of countryList | searchFilter: defaultCountry" [value]="item['name']"
+          (click)="onSelectCoutry($event,item)" (onSelectionChange)="onSelectCoutry($event,item)">
+          {{item['name']}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
   </div>
 </div>
